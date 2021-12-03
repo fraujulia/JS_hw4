@@ -22,10 +22,12 @@ if (operation === '+'){
         mult(firstNumber, secondNumber);
     } else if (operation === '/'){
         function div (firstNumber, secondNumber){
-            const result = firstNumber * secondNumber;
+            const result = firstNumber / secondNumber;
             console.log(`Результат: ${firstNumber} ${operation} ${secondNumber} = ${result}`);
         }
         div(firstNumber, secondNumber);
+    } else if (firstNumber, secondNumber !== NaN) {
+        alert ('Calculation impossible');
     }
 
 
