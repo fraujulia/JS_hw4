@@ -3,35 +3,37 @@ let secondNumber = + prompt ('Second Number');
 let operation  = prompt ('Enter operation', '+ - * /' );
 
 if (operation === '+'){
-    function sum(firstNumber, secondNumber){
-        const result = firstNumber + secondNumber;
-        console.log(`Результат: ${firstNumber} ${operation} ${secondNumber} = ${result}`);
-    } 
-    sum(firstNumber, secondNumber);
+    console.log(sum(firstNumber, secondNumber));
 } else if (operation === '-'){
-        function substr (firstNumber, secondNumber){
-            const result = firstNumber - secondNumber;
-            console.log(`Результат: ${firstNumber} ${operation} ${secondNumber} = ${result}`);
-        } 
-        substr(firstNumber, secondNumber);
-    } else if (operation === '*'){
-        function mult (firstNumber, secondNumber){
-            const result = firstNumber * secondNumber;
-            console.log(`Результат: ${firstNumber} ${operation} ${secondNumber} = ${result}`);
-        }
-        mult(firstNumber, secondNumber);
+    console.log(substr(firstNumber, secondNumber));
+        } else if (operation === '*'){
+            console.log(mult(firstNumber, secondNumber));
     } else if (operation === '/'){
-        function div (firstNumber, secondNumber){
-            const result = firstNumber / secondNumber;
-            console.log(`Результат: ${firstNumber} ${operation} ${secondNumber} = ${result}`);
+        console.log(div(firstNumber, secondNumber));
         }
-        div(firstNumber, secondNumber);
-    } else if (firstNumber, secondNumber !== NaN) {
+    else if (firstNumber, secondNumber !== NaN) {
         alert ('Calculation impossible');
     }
+    
 
+    function sum(first, second){
+        const result = first + second;
+        return (`Результат: ${first} ${operation} ${second} = ${result}`);
+    } 
 
+    function substr (first, second){
+        const result = first - second;
+        return (`Результат: ${first} ${operation} ${second} = ${result}`);
+    }
+    
+    function mult (first, second){
+            const result = first * second;
+            return (`Результат: ${first} ${operation} ${second} = ${result}`);
+        }
 
+    function div (first, second){
+            const result = first / second;
+            return (`Результат: ${first} ${operation} ${second} = ${result}`);
+    }
 
-  
-
+   
